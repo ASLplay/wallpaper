@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "Museo Sans";
+  src: local("museosanscyrl-500"), url("../font/museosanscyrl-500.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Museo Sans;
+}
+
+html {
+  background-color: var(--black);
+}
+
+:root {
+  --black: #101010;
+  --white: #DBDBDB;
+}
+
+section {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+section button {
+  transition: 2s;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid var(--white);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  transition: 2s;
+}
+.main .mainItem p {
+  text-transform: uppercase;
+  color: var(--white);
+  width: 100%;
+  font-size: 20px;
+}
+.main .mainItem p::after {
+  position: absolute;
+  content: "_";
+  animation: endWord 1.5s linear infinite;
+}
+
+@keyframes endWord {
+  from {
+    content: "";
+  }
+  to {
+    content: "_";
+  }
+}/*# sourceMappingURL=style.css.map */
