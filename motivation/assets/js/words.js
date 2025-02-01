@@ -1,4 +1,4 @@
-let array_text = ["Твой код говно", "У тебя 8 GB оперативки", "Ты тощий", "У тебя мало денег"],
+let array_text = ["Твой код говно", "Изменив свою жизнь, ты изменишь себя", "Не признавать поражение - путь к успеху", "У тебя мало денег"],
     array_new_text,
     slider__p = document.querySelector("p"),
     active_slide = 1;
@@ -20,7 +20,7 @@ function newText() {
     setTimeout(() => {
         slider__p.textContent = " ";
         showText(array_new_text, 0);
-    }, 2000);
+    }, 5000); // Время заадержки фразы
 
 };
 
@@ -34,5 +34,5 @@ function showText(array_new_text, index) {
         else {
             newText();
         }
-    }, 100)
+    }, 70) // Время появление символа
 }
